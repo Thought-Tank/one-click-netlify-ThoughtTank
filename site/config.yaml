@@ -1,6 +1,6 @@
-baseURL: "http://example.org/"
-languageCode: "de-de"
-title: "My New Hugo Site"
+baseURL: "http://localhost:3000"
+languageCode: "en-en"
+title: "My ThoughtTank"
 
 module:
   imports:
