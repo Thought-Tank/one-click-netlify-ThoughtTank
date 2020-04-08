@@ -1,82 +1,114 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: ChrisLasar/my-thoughts 
 
-media_folder: "site/static/img" # Folder where user uploaded files should go
-public_folder: "img"
+media_folder: "static/images" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images" # The src attribute for uploaded media will begin with /images/uploads
 
-collections: # A list of collections the CMS should be able to edit
-  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Post" # Used in the UI, ie.: "New Post"
-    folder: "site/content/post" # The path to the folder where the documents are stored
+collections:
+  - name: "notes" # Used in routes, e.g., /admin/collections/blog
+    label: "Notes" # Used in the UI
+    label_singular: "Note"
+    folder: "content/notes/" # The path to the folder where the documents are stored
+    description: "Collection of plain notes/thoughts."
+    summary: "{{topics}}: \"{{title}}\" ({{id}})"
+    sortableFields:
+      - 'id'
+      - 'topics'
+      - 'commit_date'
+    editor:
+      preview: false
+    #path: "{{year}}{{month}}{{day}}/{{slug}}"
+    #slug: "{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}" # Filename template, e.g., YYYY-MM-DD-title.md
     create: true # Allow users to create new documents in this collection
-    fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string"}
+    slug: "{{fields.id}}" # same as stored ID to get name in relations
+    format: frontmatter
+    fields: # The fields for each document, usually in front matter
+      - {label: "WHY? So What?", name: "title", widget: "string", hint: "Should explain the \"So what?\". WHY is this thought relevant to the reader?" }
+      - label: "Topic"
+        name: "topics"
+        widget: "relation"
+        collection: "topics"
+        required: false
+        searchFields: ["title"]
+        valueField: "title"
+      - label: "HOW?"
+        name: "body"
+        hint: >
+          HOW we came to the conclusion/advise/consequence stated in the next field (WHAT).
+        widget: "markdown"
+        minimal: true
+        buttons: ["bold", "italic", "link", "quote", "bulleted-list", "numbered-list"]
+      - label: "WHAT? Conclusion, Advise, Consequence"
+        name: "summary"
+        required: false
+        hint: >
+          WHAT should the reader do? WHAT does it mean to him?
+        widget: "markdown"
+        minimal: true
+        buttons: ["bold", "italic", "link", "quote", "bulleted-list", "numbered-list"]
+      - {label: "Keywords", name: "keywords", widget: "list", hint: "Comma separated list of central keywords. Use singular terms.", required: false}
+      - {label: "Tags", name: "tags", widget: "list", hint: "Comma separated list of tags. Use singular terms.", required: false}
+      - label: "List of References"
+        name: "references"
+        widget: "list"
+        required: false
+        fields:
+        - label: "Reference ID"
+          name: "id"
+          widget: "relation"
+          collection: "references"
+          required: false
+          displayFields: ["title","authors"]
+          searchFields: ["title","authors","id"]
+          valueField: "id"
+        - label: "Further notes"
+          hint: "For example page number or information on addition content in reference"
+          name: "note"
+          widget: "string"
+          required: false
+      - {label: "Flow State", name: "flow", widget: "list", hint: "Comma separated list of flow states.", required: false, default: ["inbox"]}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Intro Blurb", name: "description", widget: "text"}
-      - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
-  - name: "pages"
-    label: "Pages"
-    files:
-      - file: "site/content/_index.md"
-        label: "Home Page"
-        name: "home"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Subtitle, name: subtitle, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: "Blurb", name: blurb, widget: object, fields: [
-              {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "text"}]}
-          - {label: "Intro", name: intro, widget: object, fields: [
-              {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "text"}]}
-          - {label: "Products", name: products, widget: list, fields: [
-              {label: "Image", name: "image", widget: "image"},
-              {label: "Text", name: "text", widget: "text"}]}
-          - {label: "Values", name: "values", widget: "object", fields: [
-              {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "text"}]}
-      - file: "site/content/contact/_index.md"
-        label: "Contact Page"
-        name: "contact"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Logo, name: logo, widget: image}
-          - {label: Body, name: body, widget: markdown}
-          - label: Contact Entries
-            name: contact_entries
-            widget: list
-            fields:
-              - label: Heading
-                name: heading
-                widget: string
-              - label: Text
-                name: text
-                widget: text
-      - file: "site/content/products/_index.md"
-        label: "Products Page"
-        name: "products"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Description, name: description, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
-          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
-          - {label: Full_image, name: full_image, widget: image}
-          - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
-      - file: "site/content/values/_index.md"
-        label: "Values Page"
-        name: "values"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - label: Values
-            name: values
-            widget: list
-            fields:
-              - {label: Heading, name: heading, widget: string}
-              - {label: Text, name: text, widget: text}
-              - {label: Image, name: imageUrl, widget: image}
+      - {label: "For ID computation (do not change)", name: "id", widget: "datetime", format: "YYYYMMDDHHmmssSS", hint: "DO NOT CHANGE. Changing this date won't allow you to create valid links to this note in the future."}
+      - {label: "Channel", name: "channel", widget: "hidden", default: "webeditor"}
+  - name: "references" # Used in routes, e.g., /admin/collections/blog
+    label: "References" # Used in the UI
+    label_singular: "Reference"
+    summary: "\"{{title}}\" by {{authors}} ({{id}})"
+    folder: "content/references/" # The path to the folder where the documents are stored
+    description: "Collection of references."
+    editor:
+      preview: false
+    create: true # Allow users to create new documents in this collection
+    slug: "{{fields.id}}" # same as stored ID to get name in relations
+    format: frontmatter
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Authors", name: "authors", widget: "list", hint: "Comma separated list of authors."}
+      - {label: "Link", name: "link", widget: "string", required: false, hint: "URL, if available."}
+      - {label: "Summary/Notes", name: "body", widget: "markdown", hint: "Use this to make notes during reading.", required: false}
+      - label: "Topic"
+        name: "topics"
+        widget: "relation"
+        collection: "topics"
+        required: false
+        searchFields: ["title"]
+        valueField: "title"
+      - {label: "Bibliographic Details", name: "bibliography", widget: "text", hint: "For example the bibtex entry.", required: false}
+      - {label: "Date of Registration", name: "date", widget: "datetime", hint: "When did you add this to the list of references."}
+      - {label: "For ID computation (do not change)", name: "id", widget: "datetime", format: "YYYYMMDDHHmmssSS", hint: "DO NOT CHANGE. Changing this date won't allow you to create valid links to this note in the future."}
+      - {label: "Channel", name: "channel", widget: "hidden", default: "webeditor"}
+  - name: "topics" # Used in routes, e.g., /admin/collections/blog
+    label: "Topics" # Used in the UI
+    folder: "content/topics/" # The path to the folder where the documents are stored
+    path: "{{slug}}/_index" # Path and name needed for hugo taxonomies
+    description: "Topics to structure notes and references. Keep the number small."
+    editor:
+      preview: false
+    create: true # Allow users to create new documents in this collection
+    format: frontmatter
+    fields: # The fields for each document, usually in front matter
+      - {label: "Topic Name", name: "title", widget: "string"}
+      - {label: "Description", name: "body", widget: "markdown", hint: "Give an extended description of the purpose of notes collected under this topic", required: false}
+
+

@@ -1,0 +1,36 @@
+baseURL: "http://example.org/"
+languageCode: "de-de"
+title: "My New Hugo Site"
+
+module:
+  imports:
+  - path: ../../../my-thoughts
+  - path: ../../../thought-tank
+
+enableGitInfo: true
+
+taxonomies:
+  topic: topics
+  tag: tags
+  flow: flows
+  keyword: keywords
+  
+Paginate: 10
+
+related:
+  threshold: 70
+  includeNewer: true
+  toLower: true
+  indices:
+  - name: keywords
+    weight: 20
+  - name: topics
+    weight: 30    
+  - name: date
+    pattern: 20060102
+    weight: 10
+
+
+permalinks:
+  notes: /:sections/:filename-:title
+  references: /:sections/:filename-:title
