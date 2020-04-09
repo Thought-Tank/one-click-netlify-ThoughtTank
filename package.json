@@ -1,8 +1,8 @@
 {
-  "name": "victor-hugo",
-  "version": "1.0.0",
-  "description": "Victor Hugo is a Hugo boilerplate for creating truly epic websites!",
-  "repository": "netlify/victor-hugo",
+  "name": "ThoughtTank-Netlify",
+  "version": "0.1.0",
+  "description": "ThoughtTank is a modern Zettelkasten running on Netlify out of the box.",
+  "repository": "Thought-Tank/one-click-netlify-ThoughtTank",
   "main": "index.js",
   "scripts": {
     "lint": "eslint src",
@@ -64,10 +64,11 @@
     "webpack": "^4.37.0",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10",
-    "webpack-merge": "^4.1.4"
-  },
-  "dependencies": {
+    "webpack-merge": "^4.1.4",
     "bulma": "^0.8.1",
     "bulmaswatch": "^0.8.0"
+  },
+  "dependencies": {
+    "thought-tank": "git+https://github.com/Thought-Tank/thought-tank.git"
   }
 }
