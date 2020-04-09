@@ -31,6 +31,8 @@
     "assets-webpack-plugin": "^3.9.7",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
+    "bulma": "^0.8.1",
+    "bulmaswatch": "^0.8.0",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^5.0.0",
     "cross-env": "^7.0.0",
@@ -45,7 +47,7 @@
     "hugo-bin": "^0.56.0",
     "imports-loader": "^0.8.0",
     "mini-css-extract-plugin": "^0.9.0",
-    "netlify-cms-app": "^2.9.6",
+    "netlify-cms-app": "^2.12.6",
     "node-sass": "^4.10.0",
     "npm-run-all": "^4.1.5",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
@@ -64,9 +66,7 @@
     "webpack": "^4.37.0",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10",
-    "webpack-merge": "^4.1.4",
-    "bulma": "^0.8.1",
-    "bulmaswatch": "^0.8.0"
+    "webpack-merge": "^4.1.4"
   },
   "dependencies": {
     "thought-tank": "git+https://github.com/Thought-Tank/thought-tank.git"
