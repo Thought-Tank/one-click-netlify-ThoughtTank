@@ -4,7 +4,6 @@ title: "My ThoughtTank"
 
 module:
   imports:
-  - path: ../../../my-thoughts
   - path: ../../node_modules/thought-tank
 
 enableGitInfo: true
