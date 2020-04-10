@@ -10699,8 +10699,8 @@ text-table@^0.2.0:
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
 "thought-tank@https://github.com/Thought-Tank/thought-tank.git#semver:~0":
-  version "0.3.1"
-  resolved "https://github.com/Thought-Tank/thought-tank.git#4975dbdb146c314620d414e19fe307da1a791183"
+  version "0.3.3"
+  resolved "https://github.com/Thought-Tank/thought-tank.git#0307e43bd3df92040cb488914370e70cb1487dd1"
 
 through2@^2.0.0:
   version "2.0.5"
