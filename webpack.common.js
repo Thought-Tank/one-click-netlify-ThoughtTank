@@ -57,8 +57,8 @@ module.exports = {
     new WebpackConcatPlugin({
       bundles: [
         {
-          destination: './dist/static/admin/config.yml',
-          source: ['./netlifycms.yaml', './node_modules/thought-tank/static/admin/config.yml'],
+          destination: './dist/admin/config.yml',
+          source: ['./netlifycms.yml', './node_modules/thought-tank/netlifycms.yml'],
         }
       ]
     }),
