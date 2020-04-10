@@ -65,10 +65,11 @@
     "url-loader": "^2.1.0",
     "webpack": "^4.37.0",
     "webpack-cli": "^3.1.2",
+    "webpack-concat-files-plugin": "^0.3.1",
     "webpack-dev-server": "^3.1.10",
     "webpack-merge": "^4.1.4"
   },
   "dependencies": {
-    "thought-tank": "git+https://github.com/Thought-Tank/thought-tank.git"
+    "thought-tank": "https://github.com/Thought-Tank/thought-tank.git#semver:~0"
   }
 }

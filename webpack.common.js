@@ -4,6 +4,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const AssetsPlugin = require("assets-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const WebpackConcatPlugin = require('webpack-concat-files-plugin');
 
 module.exports = {
   entry: {
@@ -52,6 +53,14 @@ module.exports = {
       filename: 'admin/index.html',
       template: 'src/cms.html',
       inject: false,
+    }),
+    new WebpackConcatPlugin({
+      bundles: [
+        {
+          destination: './dist/static/admin/config.yml',
+          source: ['./netlifycms.yaml', './node_modules/thought-tank/static/admin/config.yml'],
+        }
+      ]
     }),
   ]
 };
