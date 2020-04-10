@@ -2135,6 +2135,16 @@ builtin-status-codes@^3.0.0:
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
   integrity sha1-hZgoeOIbmOHGZCXgPQF0eI9Wnug=
 
+bulma@^0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.8.1.tgz#a5feacb703b73a87fdeae4f0d12317d62fc1d301"
+  integrity sha512-Afi2zv4DKmNSYfmx55V+Mtnt8+WfR8Rs65kWArmzEuWP7vNr7dSAEDI+ORZlgOR1gueNZwpKaPdUi4ZiTNwgPA==
+
+bulmaswatch@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/bulmaswatch/-/bulmaswatch-0.8.0.tgz#11057ea5ecc1765de0f7049dd2bdbe3a0afbc992"
+  integrity sha512-ubqgGrUXL/BM0dhG309lmR9BQnV7kjp1vXhqGOE6xqOR+qHjHpuqxACNbBCWn+uSXhTAyE7VnmXffc9qQkm3xg==
+
 bytes@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/bytes/-/bytes-3.0.0.tgz#d32815404d689699f85a4ea4fa8755dd13a96048"
@@ -4405,7 +4415,6 @@ fsevents@^1.2.7:
   dependencies:
     bindings "^1.5.0"
     nan "^2.12.1"
-    node-pre-gyp "*"
 
 fstream@^1.0.0, fstream@^1.0.12:
   version "1.0.12"
@@ -6658,7 +6667,7 @@ neo-async@^2.5.0, neo-async@^2.6.1:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
 
-netlify-cms-app@^2.9.6:
+netlify-cms-app@^2.12.6:
   version "2.12.6"
   resolved "https://registry.yarnpkg.com/netlify-cms-app/-/netlify-cms-app-2.12.6.tgz#5306f9eaae01171bbb02f73cb9e8a753b3c9c774"
   integrity sha512-Wl07fx3ny9vPzVthF2CohsHCHPtGvfBe+FSv008TOW+d7zYmIfVZ930amnbFCvlAYSaSEnQHYIDXjhOpBMBwSg==
@@ -10629,6 +10638,10 @@ text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
+
+"thought-tank@git+https://github.com/Thought-Tank/thought-tank.git":
+  version "0.2.0"
+  resolved "git+https://github.com/Thought-Tank/thought-tank.git#e188f7bf6225090981f962dc8e1117d042d98787"
 
 through2@^2.0.0:
   version "2.0.5"
