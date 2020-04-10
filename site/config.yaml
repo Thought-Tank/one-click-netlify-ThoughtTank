@@ -1,4 +1,4 @@
-baseURL: "http://localhost:3000"
+baseURL: "https://thought-tank.netlify.com"
 languageCode: "en-en"
 title: "My ThoughtTank"
 
