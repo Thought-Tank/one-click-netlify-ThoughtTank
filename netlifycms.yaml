@@ -2,4 +2,5 @@
 # Usually it is the same play where you find this file. 
 backend:
   name: github
-  repo: ChrisLasar/my-thoughts 
+  repo: Thought-Tank/one-click-netlify-ThoughtTank
+  branch: zettelkasten
