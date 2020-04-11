@@ -2,10 +2,6 @@ baseURL: "https://thought-tank.netlify.com"
 languageCode: "en-en"
 title: "My ThoughtTank"
 
-module:
-  imports:
-  - path: ../../node_modules/thought-tank
-
 enableGitInfo: true
 
 taxonomies:
@@ -33,3 +29,9 @@ related:
 permalinks:
   notes: /:sections/:filename-:title
   references: /:sections/:filename-:title
+
+params:
+  netlify:
+    # Copy line from your site's "Settings > General > Status badges" menu
+    status-badge: >
+      [![Netlify Status](https://api.netlify.com/api/v1/badges/7ab4b96c-1e91-4a02-b24a-2b72327da918/deploy-status)](https://app.netlify.com/sites/thought-tank/deploys)
