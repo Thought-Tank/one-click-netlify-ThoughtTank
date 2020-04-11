@@ -33,5 +33,5 @@ permalinks:
 params:
   netlify:
     # Copy line from your site's "Settings > General > Status badges" menu
-    status-badge: >
+    status_badge: >
       [![Netlify Status](https://api.netlify.com/api/v1/badges/7ab4b96c-1e91-4a02-b24a-2b72327da918/deploy-status)](https://app.netlify.com/sites/thought-tank/deploys)
