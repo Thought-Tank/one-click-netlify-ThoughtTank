@@ -31,6 +31,10 @@ permalinks:
   references: /:sections/:filename-:title
 
 params:
+  backend:
+    name: github
+    repo: Thought-Tank/one-click-netlify-ThoughtTank
+    branch: zettelkasten
   netlify:
     # Copy line from your site's "Settings > General > Status badges" menu
     status_badge: >

@@ -1,6 +1,0 @@
-# Decide yourself in which git rpository to store your thoughts (Github, Bitbucket, ...)
-# Usually it is the same play where you find this file. 
-backend:
-  name: github
-  repo: Thought-Tank/one-click-netlify-ThoughtTank
-  branch: zettelkasten

@@ -49,6 +49,7 @@ module.exports = {
         flatten: true
       }
     ]),
+/*
     new HtmlWebpackPlugin({
       filename: 'admin/index.html',
       template: 'src/cms.html',
@@ -62,5 +63,6 @@ module.exports = {
         }
       ]
     }),
+    */
   ]
 };
