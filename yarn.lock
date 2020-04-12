@@ -2882,8 +2882,8 @@ teeny-tap@^0.2.0:
   integrity sha1-Fn5kUYLQasIi1iuyq2eUenClimg=
 
 "thought-tank@https://github.com/Thought-Tank/thought-tank.git#semver:~0":
-  version "0.6.0"
-  resolved "https://github.com/Thought-Tank/thought-tank.git#dfd5efdaea410d2a387063726d0e937f93db808b"
+  version "0.6.1"
+  resolved "https://github.com/Thought-Tank/thought-tank.git#aafe798dbddee6ef946765a9254688e07a0e705b"
 
 tiny-invariant@^1.0.1, tiny-invariant@^1.0.2:
   version "1.1.0"
