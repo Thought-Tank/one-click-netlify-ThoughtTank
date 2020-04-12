@@ -1,3 +1,9 @@
 imports:
 # Get it directly from the rpository checked out in parallel
 - path: ../../../thought-tank
+- path: ../../node_modules/@fortawesome/fontawesome-free
+  ignoreConfig: true
+  disable: false
+  mounts:
+  - source: svgs
+    target: assets/svg/fa-svgs

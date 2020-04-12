@@ -1,7 +1,7 @@
 // JS Goes here - ES6 supported
 
 import "./css/mystyles.scss";
-import "../node_modules/@fortawesome/fontawesome-free/js/all.js";
+//import "../node_modules/@fortawesome/fontawesome-free/js/all.js";
 
 
 // Say hello
