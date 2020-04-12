@@ -16,12 +16,6 @@
   "author": "Christian Lasarczyk",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
-    "@babel/plugin-syntax-object-rest-spread": "^7.0.0",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/preset-react": "^7.0.0",
-    "@babel/register": "^7.5.5",
     "@fortawesome/fontawesome-free": "^5.13.0",
     "bulma": "^0.8.1",
     "bulmaswatch": "^0.8.0",
