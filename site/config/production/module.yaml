@@ -1,14 +1,2 @@
 imports:
 - path: ../../node_modules/thought-tank
-- path: ../../node_modules/@fortawesome/fontawesome-free
-  ignoreConfig: true
-  disable: false
-  mounts:
-  - source: svgs
-    target: assets/svg/fa-svgs
-- path: ../../node_modules/netlify-cms
-  ignoreConfig: true
-  disable: false
-  mounts:
-  - source: dist
-    target: assets/js/netlify
