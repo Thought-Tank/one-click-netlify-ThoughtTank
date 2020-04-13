@@ -465,8 +465,8 @@ supports-color@^5.3.0:
     has-flag "^3.0.0"
 
 "thought-tank@https://github.com/Thought-Tank/thought-tank.git#semver:~0":
-  version "0.8.0"
-  resolved "https://github.com/Thought-Tank/thought-tank.git#3af7caa517ada484bf834dcb918da7110e03b87f"
+  version "0.8.1"
+  resolved "https://github.com/Thought-Tank/thought-tank.git#fa8dcf8accda9337684744040f2b90a58287bfc6"
   dependencies:
     "@fortawesome/fontawesome-free" "^5.13.0"
     bulma "^0.8.1"
