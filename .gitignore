@@ -1,6 +1,7 @@
 node_modules/
 dist/
-/site/data/webpack.json
 /npm-debug.log
 yarn-error.log
+/site/data/webpack.json
 /site/resources/_gen/
+/site/hugo_stats.json
