@@ -2882,8 +2882,8 @@ teeny-tap@^0.2.0:
   integrity sha1-Fn5kUYLQasIi1iuyq2eUenClimg=
 
 "thought-tank@https://github.com/Thought-Tank/thought-tank.git#semver:~0":
-  version "0.7.2"
-  resolved "https://github.com/Thought-Tank/thought-tank.git#ba975fdcc1db92a2406a867dda0e2851c861d0f8"
+  version "0.7.3"
+  resolved "https://github.com/Thought-Tank/thought-tank.git#616ff19e239b396a0895382ea695166c7a07d0ab"
   dependencies:
     "@fortawesome/fontawesome-free" "^5.13.0"
     bulma "^0.8.1"
@@ -3071,9 +3071,9 @@ uploadcare-widget-tab-effects@^1.4.0:
   integrity sha512-83Nu4w1rmWnQWpD14cM5HczmpZX326MwQbhVhfBhDt9mQtd2PxOCZbgaxq03YP6Cbrs87U6V1IokP7UkJRjcfw==
 
 uploadcare-widget@^3.7.0:
-  version "3.8.3"
-  resolved "https://registry.yarnpkg.com/uploadcare-widget/-/uploadcare-widget-3.8.3.tgz#647a6cbcdecbc162f07e28ab02515f9650364bfb"
-  integrity sha512-pOOQWYrbyk5cAsN/MTEVVJO6HT5NVLcZts8kStMdES83faIDs8o6QrRTMvuF13hGgzKpyMFa1d1FsuiMOukb4w==
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/uploadcare-widget/-/uploadcare-widget-3.9.0.tgz#e98c07d661eeabd69db75163e7de4caf359b5541"
+  integrity sha512-TqZJVuidYPz33sCa62asCpTvI0MFDlprCPxZy5xC7z/q8A1FSuh2RR4XaE1lfkv7vMAQbdZyH4hqZHTiUb5ndw==
   dependencies:
     escape-html "^1.0.3"
     jquery "^3.4.1"
