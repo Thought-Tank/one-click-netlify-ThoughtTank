@@ -1,4 +1,5 @@
 ---
+title: Zettelkasten about Zettelkästen (with ToughtTank)
 ---
 {{< button-enter-note >}}
 
