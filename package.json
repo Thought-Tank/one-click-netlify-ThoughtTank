@@ -10,7 +10,8 @@
     "preview": "run-p preview:**",
     "preview:hugo": "hugo serve -d ../dist -s site -vw --baseURL '' --environment production -D -F",
     "prebuild": "rimraf dist",
-    "build": "npm run build:hugo",
+    "prebuild:backlinks": "node node_modules/thought-tank-backlink-js/index.js",
+    "build": "npm run prebuild:backlinks && npm run build:hugo",
     "build:hugo": "hugo -d ../dist -s site -v"
   },
   "author": "Christian Lasarczyk",
@@ -18,7 +19,8 @@
   "devDependencies": {
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.0",
-    "thought-tank": "https://github.com/Thought-Tank/thought-tank.git#semver:~0"
+    "thought-tank": "https://github.com/Thought-Tank/thought-tank.git#semver:~0",
+    "thought-tank-backlink-js": "https://github.com/Thought-Tank/thought-tank-backlink-js.git#semver:~1"
   },
   "dependencies": {}
 }
