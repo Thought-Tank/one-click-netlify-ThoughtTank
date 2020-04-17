@@ -28,6 +28,6 @@ The following notes might not be linked sufficiently.
 
 ### Implicit Connections by Keywords
 
-The table below lists notes with missing keywords. Detecting elated notes heavily depend on keywords. So If you do not list keywords, we cannot find related notes.
+The table below lists notes with missing keywords. Detecting related notes heavily depend on keywords. So If you do not list keywords, we cannot find related notes.
 
 {{< flow/missing-keywords >}}
