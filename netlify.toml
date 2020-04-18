@@ -14,3 +14,9 @@
   to = "/notes/:id"
   status = 200
   force = false
+
+[[redirects]]
+  from = "/references/:id/:title"
+  to = "/references/:id"
+  status = 200
+  force = false
