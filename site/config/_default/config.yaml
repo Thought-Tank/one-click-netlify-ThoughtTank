@@ -42,6 +42,6 @@ related:
 
 
 permalinks:
-  notes: /:sections/:filename-:title
-  references: /:sections/:filename-:title
+  notes: /:sections/:filename
+  references: /:sections/:filename
       

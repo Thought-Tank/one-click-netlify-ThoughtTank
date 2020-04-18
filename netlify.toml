@@ -7,3 +7,10 @@
 
 [context.deploy-preview]
   command = "yarn build:preview"
+
+
+[[redirects]]
+  from = "/notes/:id/:title"
+  to = "/notes/:id"
+  status = 200
+  force = false
