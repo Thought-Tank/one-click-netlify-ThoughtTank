@@ -39,9 +39,4 @@ related:
   - name: date
     pattern: 20060102
     weight: 10
-
-
-permalinks:
-  notes: /:sections/:filename
-  references: /:sections/:filename
       
