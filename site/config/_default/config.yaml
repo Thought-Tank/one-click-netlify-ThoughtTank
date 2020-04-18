@@ -4,6 +4,14 @@ title: "My ThoughtTank"
 
 params:
   author: Christian Lasarczyk
+  about:
+    address: >
+      Tübinger Str. 124<br>
+      71732 Tamm<br>
+      Germany
+    contact:
+      phone: +49 7141 9920566
+      email: christian@lasarczyk.de
   backend:
     name: github
     repo: Thought-Tank/one-click-netlify-ThoughtTank
