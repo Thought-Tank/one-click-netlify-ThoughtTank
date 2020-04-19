@@ -1,6 +1,6 @@
-baseURL: "https://thought-tank.netlify.com"
+baseURL: "https://thought-tank.netlify.app"
 languageCode: "en-en"
-title: "My ThoughtTank"
+title: "Thought Tank"
 
 params:
   author: Christian Lasarczyk
