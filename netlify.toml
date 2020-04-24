@@ -1,6 +1,5 @@
 [build.environment]
-  YARN_VERSION = "1.12.1"
-  NPM_VERSION = "6.4.1"
+  HUGO_VERSION = "0.69.0"
 
 [build]
   command = "yarn build"
@@ -8,3 +7,16 @@
 
 [context.deploy-preview]
   command = "yarn build:preview"
+
+
+[[redirects]]
+  from = "/notes/:id/:title"
+  to = "/notes/:id"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/references/:id/:title"
+  to = "/references/:id"
+  status = 200
+  force = false

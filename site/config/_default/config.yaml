@@ -1,0 +1,42 @@
+baseURL: "https://thought-tank.netlify.app"
+languageCode: "en-en"
+title: "Thought Tank"
+
+params:
+  author: Christian Lasarczyk
+  about:
+    address: >
+      Tübinger Str. 124<br>
+      71732 Tamm<br>
+      Germany
+    contact:
+      phone: +49 7141 9920566
+      email: christian@lasarczyk.de
+  backend:
+    name: github
+    repo: Thought-Tank/one-click-netlify-ThoughtTank
+    branch: zettelkasten
+
+enableGitInfo: true
+
+taxonomies:
+  topic: topics
+  tag: tags
+  flow: flows
+  keyword: keywords
+  
+Paginate: 10
+
+related:
+  threshold: 70
+  includeNewer: true
+  toLower: true
+  indices:
+  - name: keywords
+    weight: 20
+  - name: topics
+    weight: 30    
+  - name: date
+    pattern: 20060102
+    weight: 10
+      
