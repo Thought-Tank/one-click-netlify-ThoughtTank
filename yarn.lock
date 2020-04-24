@@ -332,9 +332,9 @@ dir-glob@^3.0.1:
     path-type "^4.0.0"
 
 electron-to-chromium@^1.3.413:
-  version "1.3.415"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.415.tgz#e50241c1e2553e46cfe956c9d95f9ab3fc9a9134"
-  integrity sha512-GbtYqKffx3sU8G0HxwXuJFfs58Q7+iwLa5rBwaULwET6jWW8IAQSrVnu7vEfiUIcMVfbYyFg7cw3zdm+EbBJmw==
+  version "1.3.416"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.416.tgz#6c530159670de9250a2ba7d8f07ddd9c42b7da26"
+  integrity sha512-fmSrpOQC1dEXzsznzAMXbhQLkpAr21WtaUfRXnIbh8kblZIaMwSL6A8u2RZHAzZliSoSOM3FzS2z/j8tVqrAAw==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -1219,8 +1219,8 @@ supports-color@^7.1.0:
     marked "^0.8.2"
 
 "thought-tank@https://github.com/Thought-Tank/thought-tank.git#semver:~0":
-  version "0.16.0"
-  resolved "https://github.com/Thought-Tank/thought-tank.git#a129ca9914a707332d82f4beeb54af03374f1673"
+  version "0.17.0"
+  resolved "https://github.com/Thought-Tank/thought-tank.git#70f8a3043aa3cabe649e7ee4111b69b29a3e4490"
   dependencies:
     "@fortawesome/fontawesome-free" "^5.13.0"
     "@fullhuman/postcss-purgecss" "^2.1.2"
