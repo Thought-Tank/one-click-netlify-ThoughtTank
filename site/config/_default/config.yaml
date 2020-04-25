@@ -15,7 +15,7 @@ params:
   backend:
     name: github
     repo: Thought-Tank/one-click-netlify-ThoughtTank
-    branch: zettelkasten
+    branch: master
 
 enableGitInfo: true
 
