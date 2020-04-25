@@ -1219,8 +1219,8 @@ supports-color@^7.1.0:
     marked "^0.8.2"
 
 "thought-tank@https://github.com/Thought-Tank/thought-tank.git#semver:~0":
-  version "0.17.2"
-  resolved "https://github.com/Thought-Tank/thought-tank.git#d1244994fddc456c2a3b4abebfbce3085a7dab48"
+  version "0.17.3"
+  resolved "https://github.com/Thought-Tank/thought-tank.git#e222bca6d03f1c7ebf2c4037841294d9d272ec98"
   dependencies:
     "@fortawesome/fontawesome-free" "^5.13.0"
     "@fullhuman/postcss-purgecss" "^2.1.2"
