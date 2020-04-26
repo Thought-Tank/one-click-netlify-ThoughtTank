@@ -15,6 +15,7 @@ You can use the flow state `inbox` for new notes. Then we new you are aware that
 ## Further Inboxes
 
 * [Pocket, articles tagged with inbox](https://app.getpocket.com/tags/inbox/all)
+* [Apple iCloud Notes](https://www.icloud.com/notes/)
 
 Add your own inboxes here.
 
