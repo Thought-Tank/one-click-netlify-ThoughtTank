@@ -26,6 +26,14 @@ The following notes might not be linked sufficiently.
 
 {{< flow/unlinked-notes >}}
 
+### Links with Outdated Title in Link
+
+To provide stable but readable markdown links we suggest to link notes using `[#](/notes/<id> "<title>")` and autogenerate the link code for you.
+However the title in the (generated link) is the one at the time of linking.It might change later.
+While the link still works as expected, reading the raw link in an editor might be missleading. 
+We detect these outdated links for you. You might want to fix it.
+
+{{< flow/links-with-outdated-title >}}
 
 ### Implicit Connections by Keywords
 
