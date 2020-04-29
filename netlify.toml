@@ -2,12 +2,19 @@
   HUGO_VERSION = "0.69.0"
 
 [build]
-  command = "yarn build"
+  command = """\
+            sed -i s#TT_PLACEHOLDER_REPOSITORY#${REPOSITORY_URL}#g site/config/_default/config.yaml \
+            && sed -i s#TT_PLACEHOLDER_BRANCH#${BRANCH}#g site/config/_default/config.yaml \
+            && sed -i s#TT_PLACEHOLDER_URL#${URL}#g site/config/_default/config.yaml \
+            && yarn build"""
+
   publish = "dist"
+
+[template.environment]
+  HUGO_PARAMS_AUTHOR = "Your name here"
 
 [context.deploy-preview]
   command = "yarn build:preview"
-
 
 [[redirects]]
   from = "/notes/:id/:title"

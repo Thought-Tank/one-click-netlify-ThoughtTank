@@ -1,9 +1,9 @@
-baseURL: "https://thought-tank.netlify.app"
+baseURL: "TT_PLACEHOLDER_URL"
 languageCode: "en-en"
 title: "Thought Tank"
 
 params:
-  author: Christian Lasarczyk
+  #author: Your name here
   about:
     address: >
       Tübinger Str. 124<br>
@@ -14,8 +14,8 @@ params:
       email: christian@lasarczyk.de
   backend:
     name: github
-    repo: Thought-Tank/one-click-netlify-ThoughtTank
-    branch: master
+    repo: "TT_PLACEHOLDER_REPOSITORY"
+    branch: "TT_PLACEHOLDER_BRANCH"
 
 enableGitInfo: true
 
