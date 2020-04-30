@@ -3,15 +3,15 @@ languageCode: "en-en"
 #title: "The title of your Zettelkasten"
 
 params:
-  #author: Your name here
+  author: "TT_PLACEHOLDER_AUTHOR"
   about:
     address: >
       Tübinger Str. 124<br>
       71732 Tamm<br>
       Germany
     contact:
-      #phone: +49 123 45678
-      #email: first@last.name
+      phone: "TT_PLACEHOLDER_PHONE"
+      email: "TT_PLACEHOLDER_EMAIL"
   backend:
     name: github
     repo: "TT_PLACEHOLDER_REPOSITORY"
