@@ -1,6 +1,6 @@
 baseURL: "TT_PLACEHOLDER_URL"
 languageCode: "en-en"
-title: "Thought Tank"
+#title: "The title of your Zettelkasten"
 
 params:
   #author: Your name here
@@ -10,8 +10,8 @@ params:
       71732 Tamm<br>
       Germany
     contact:
-      phone: +49 7141 9920566
-      email: christian@lasarczyk.de
+      #phone: +49 123 45678
+      #email: first@last.name
   backend:
     name: github
     repo: "TT_PLACEHOLDER_REPOSITORY"

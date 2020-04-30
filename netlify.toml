@@ -11,7 +11,10 @@
   publish = "dist"
 
 [template.environment]
-  HUGO_PARAMS_AUTHOR = "Your name here"
+  HUGO_TITLE = "Title of your Zettenkasten"
+  HUGO_PARAMS.AUTHOR = "Your name"
+  HUGO_PARAMS.CONTACT.PHONE = "e.g. +49 123 45678"
+  HUGO_PARAMS.CONTACT.EMAIL = "e.g. first@last.name"
 
 [context.deploy-preview]
   command = "yarn build:preview"
