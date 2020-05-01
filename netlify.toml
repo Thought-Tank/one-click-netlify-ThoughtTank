@@ -19,7 +19,7 @@
 [template.environment]
   TT_SITE_TITLE = "Title of your Zettenkasten"
   TT_AUTHOR = "Your name"
-  TT_ADDRESS = "Your address for About-page (optional)"
+  TT_ADDRESS = "Your address for About-page (optional), e.g. street<br>zip code<br>city"
   TT_PHONE = "Phone e.g. +49 123 45678 (optional)"
   TT_EMAIL = "Mail e.g. first@last.name (optional)"
 
