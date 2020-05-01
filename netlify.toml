@@ -3,12 +3,13 @@
 
 [build]
   command = """\
-            sed -i s#TT_PLACEHOLDER_REPOSITORY#${REPOSITORY_URL}#g site/config/_default/config.yaml \
-            && sed -i s#TT_PLACEHOLDER_BRANCH#${BRANCH}#g site/config/_default/config.yaml \
-            && sed -i s#TT_PLACEHOLDER_URL#${URL}#g site/config/_default/config.yaml \
-            && sed -i s#TT_PLACEHOLDER_AUTHOR#${TT_AUTHOR}#g site/config/_default/config.yaml \
-            && sed -i s#TT_PLACEHOLDER_PHONE#${TT_PHONE}#g site/config/_default/config.yaml \
-            && sed -i s#TT_PLACEHOLDER_EMAIL#${TT_EMAIL}#g site/config/_default/config.yaml \
+            sed -i "s|TT_PLACEHOLDER_REPOSITORY|${REPOSITORY_URL}|g
+            s|TT_PLACEHOLDER_BRANCH|${BRANCH}|g
+            s|TT_PLACEHOLDER_URL|${URL}|g
+            s|TT_PLACEHOLDER_AUTHOR|${TT_AUTHOR}|g
+            s|TT_PLACEHOLDER_PHONE|${TT_PHONE}|g
+            s|TT_PLACEHOLDER_EMAIL|${TT_EMAIL}|g
+            " site/config/_default/config.yaml \
             && yarn build"""
 
   publish = "dist"
