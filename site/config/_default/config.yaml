@@ -1,14 +1,11 @@
 baseURL: "TT_PLACEHOLDER_URL"
 languageCode: "en-en"
-#title: "The title of your Zettelkasten"
+title: "TT_PLACEHOLDER_SITE_TITLE"
 
 params:
   author: "TT_PLACEHOLDER_AUTHOR"
   about:
-    address: >
-      Tübinger Str. 124<br>
-      71732 Tamm<br>
-      Germany
+    address: "TT_PLACEHOLDER_ADDRESS"
     contact:
       phone: "TT_PLACEHOLDER_PHONE"
       email: "TT_PLACEHOLDER_EMAIL"

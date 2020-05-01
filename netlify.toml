@@ -9,16 +9,19 @@
             s|TT_PLACEHOLDER_AUTHOR|${TT_AUTHOR}|g
             s|TT_PLACEHOLDER_PHONE|${TT_PHONE}|g
             s|TT_PLACEHOLDER_EMAIL|${TT_EMAIL}|g
+            s|TT_PLACEHOLDER_SITE_TITLE|${TT_SITE_TITLE}|g
+            s|TT_PLACEHOLDER_ADDRESS|${TT_ADDRESS}|g
             " site/config/_default/config.yaml \
             && yarn build"""
 
   publish = "dist"
 
 [template.environment]
-  HUGO_TITLE = "Title of your Zettenkasten"
+  TT_SITE_TITLE = "Title of your Zettenkasten"
   TT_AUTHOR = "Your name"
-  TT_PHONE = "Phone e.g. +49 123 45678"
-  TT_EMAIL = "Mail e.g. first@last.name"
+  TT_ADDRESS = "Your address for About-page (optional)"
+  TT_PHONE = "Phone e.g. +49 123 45678 (optional)"
+  TT_EMAIL = "Mail e.g. first@last.name (optional)"
 
 [context.deploy-preview]
   command = "yarn build:preview"
